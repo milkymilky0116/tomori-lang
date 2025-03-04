@@ -1,0 +1,35 @@
+#[derive(Debug, PartialEq, Clone)]
+pub enum TokenType {
+    ILLEGAL,
+    PLUS,
+    ASSIGN,
+    COMMA,
+    SEMICOLON,
+    LPAREN,
+    RPAREN,
+    LBRACE,
+    RBRACE,
+    EOF,
+    IDENT(String),
+    LET,
+    INT(i64),
+    FUNCTION,
+    BANG,
+    SLASH,
+    ASTERISK,
+    MINUS,
+    LT,
+    GT,
+    TRUE,
+    FALSE,
+    IF,
+    RETURN,
+    ELSE,
+    EQ,
+    NotEQ,
+}
+
+pub struct Token {
+    pub token_type: TokenType,
+    pub literal: String,
+}
